@@ -1,0 +1,141 @@
+doctype html
+html(lang='ar', dir='rtl')
+ head
+  meta(charset='utf-8')
+  meta(http-equiv = 'X-UA-compatible', content='IE-edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Mysite
+  link(href='css/normalize.css', rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Merriweather&display=swap', rel="stylesheet")
+  link(href='css/font-awesome.min.css', rel='stylesheet')
+  link(href='css/homepage.css', rel='stylesheet')
+  link(href='css/homepage-rtl.css', rel='stylesheet')
+ body
+  header
+   div.container
+    div(class='header-content flex')
+     div.logo
+      h1 Composition
+      button.the-toggler
+       span
+       span
+       span
+     nav
+      - var arr = ['Homepage', 'Style demo', 'Full width', 'Dropdown', 'Link text']
+      ul.flex
+       each val in arr
+        li: a(href='#')= val
+  // Start Slider
+  section.slider
+   div.container
+    blockquote 
+     |
+     sup
+      i(class='fa fa-quote-right')
+     | 
+     |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque
+     | 
+     sub
+      i(class='fa fa-quote-left')
+    |
+    div.slide
+     div.slider-image
+      img(src='images/slider1.jpg', alt='slider-image')
+     ul.bullets
+      - for(var i = 1; i < 4; i++)
+       - if(i == 1)
+        li.active: a(href='#')
+       - else
+        li: a(href='#')
+  // End Slider
+  // Start Services
+  section.services
+   div.container
+    div(class='heading-with-border')
+     h2  Our Services
+    div(class='services-content flex')
+     - var icons = ['globe', 'users', 'cogs']
+     - for(var i = 0; i < 3; i++)
+      div(class='service text-center-xs')
+       h3
+        i(class='fa fa-' + icons[i])
+        |  Indonectetus facilis
+       p Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt.
+       |
+       |
+       a(href='#') Read More 
+        i(class='fa fa-angle-double-left')
+  // End Services
+  // Start Our Players
+  section.players
+   div.container
+    div(class='heading-with-border')
+     h2  Our Players
+    div(class='player-content flex')
+     - for(var i = 0; i < 5; i++)
+       div(class='player text-center-xs')
+        img(src='images/player.jpg')
+        h3
+         span Name: 
+         |  John Doe
+        p Justo convallis augue estas aenean elit intesque sed facilispede estibulum nulla.
+        |
+        |
+        a(href='#') View Profile 
+         i(class='fa fa-angle-double-left')
+  // End Our Players
+  // Start Lorem
+  section.lorem-ipsum
+   div.container
+    div(class='heading-with-border')
+     h2  Lorem Ipsum
+    div(class='lorem-content flex')
+     - for(var i = 1; i < 4; i++)
+       div.lorem-image
+        img(src='images/image' + i + '.jpg')
+  // End Lorem
+  // Start Footer
+  footer(class='text-center-xs')
+   div.container
+    div(class='footer-content flex')
+     div.gallery
+      h3 Latest From The Blog
+      div.img-box
+       img(src='images/gallery.jpeg')
+       div.img-info
+        h4 Metuervestas mus lacinia
+        p Convallisijusto vestas mus pellentum aeneansa pibu lum in aliquam volut pat integest nulla. Acsed sed nunc at fring maurisusce at elis ut vitae laorem.
+      div.img-box
+       img(src='images/gallery1.jpg')
+       div.img-info
+        h4 Metuervestas mus lacinia
+        p Convallisijusto vestas mus pellentum aeneansa pibu lum in aliquam volut pat integest nulla. Acsed sed nunc at fring maurisusce at elis ut vitae laorem.
+     div.info
+      h3 Company Details
+      ul
+       li Company Name
+       li Street Name & Number
+       li Town
+       li Postcode/Zip
+       li Tel: xxxxx xxxxxxxxxx
+       li Fax: xxxxx xxxxxxxxxx
+       li Email: 
+        span contact@mydomain.com
+      h4 Office Hours
+      p Monday - Friday: 08:00 - 17:30
+     
+     div.contact
+      h3 Contact Us
+      form
+       input(type='text', placeholder='Name')
+       input(type='email', placeholder='Email')
+       textarea(placeholder='Message')
+       input(type='submit', class='main-button', value='Submit')
+    div.copyright 
+     div.text Copyright &copy; 2019 - All Rights Reserved
+  // End Footer
+  script(src='js/jquery-3.3.1.min.js')
+  script(src='js/custom.js')
+  
+    
+ 

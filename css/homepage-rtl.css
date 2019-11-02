@@ -1,0 +1,28 @@
+.services .services-content .service:not(:last-of-type) {
+  padding-left: 20px;
+}
+.services .services-content .service h3 i {
+  margin-left: 8px;
+}
+
+@media (min-width: 992px) {
+  .players .player-content .player {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .footer-content .gallery .img-box img {
+    float: right;
+  }
+}
+footer .footer-content .gallery .img-box img .img-info {
+  float: right;
+}
+
+.the-toggler {
+  right: auto;
+  left: 0;
+}
+
+/*# sourceMappingURL=homepage-rtl.css.map */

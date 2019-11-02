@@ -1,0 +1,120 @@
+footer {
+    padding: 40px 0 0;
+    background-color: $greyColor;
+    .footer-content {
+        flex-wrap: wrap;
+        .gallery {
+           
+            @media #{$minSmall} {
+                flex-basis: 100%;
+                margin-bottom: 25px;
+            }
+            @media #{$minLarge} {
+               flex-basis: 50%; 
+            }
+           .img-box {
+                overflow: hidden;
+                margin-bottom: 25px;
+                img {
+                    @media #{$minSmall} {
+                       float: $float-left; 
+                    }
+                    width: 120px;
+                    height: 120px;
+                    border: 1px solid $textColor;
+                    padding: 5px;
+                }
+                .img-info {
+                    @media #{$minSmall} {
+                        float: $float-left;
+                        margin-left: 15px;
+                        margin-right: 15px;
+                        width: calc(100% - 150px);
+                    }
+                   
+                    h4 {
+                        color: $redColor;
+                        margin-top: 8px;
+                        font-size: 15px;
+                    }
+                    p {
+                       color: $textColor;
+                       line-height: 1.6;
+                        font-size: 14px;
+                    }
+                }
+            
+        }
+        
+    }
+       .info {
+           @media #{$maxMobile} {
+               flex-basis: 100%;
+               margin-bottom: 25px;
+           }
+            @media #{$minSmall} {
+               flex-basis: 50%;
+            }
+            @media #{$minLarge} {
+               flex-basis: 25%;
+            }
+            ul, h4, p {
+                font-size: 14px;
+                color: $textColor;
+            }
+            ul {
+                line-height: 1.7;
+                li {
+                    padding: 0 0 4px;
+                    span {
+                        color: $redColor;
+                    }
+
+
+                }
+            }
+            h4 {
+                margin-bottom: 0;
+            }
+            p {
+                margin-top: 10px;
+            }
+    }
+       .contact {
+           @media #{$minSmall} {
+               flex-basis: 50%;
+            }
+            @media #{$minLarge} {
+               flex-basis: 25%;
+            }
+            form {
+                input[type="text"], input[type="email"], textarea {
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                textarea {
+                    height: 120px;
+                }
+        }
+    }
+        h3 {
+            color: $headColor;
+            font-weight: 100;
+            font-size: 18.5px;
+            margin-bottom: 30px;
+        }
+    }
+        .copyright {
+            margin-top: 30px;
+            padding: 20px 0;
+            color: $textColor;
+            font-size: 14px;
+            border-top: 1px solid $textColor;
+            .text {
+                text-align: center;
+            }
+        }
+}

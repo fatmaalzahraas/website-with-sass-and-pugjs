@@ -1,0 +1,64 @@
+header {
+    padding: 40px 0;
+    border-bottom: 1px solid $greyColor;
+    text-transform: uppercase;
+    @media #{$maxSmall} {
+        padding: 25px 0 20px;
+    }
+    .header-content {
+        @media #{$maxSmall} {
+            display: block;
+        }
+       .logo {
+            position: relative;
+            flex-grow: 1;
+            @media #{$maxSmall} {
+                margin-bottom: 20px;
+            }
+            h1 {
+               margin: 10px 0 0;
+               color: $headColor;
+               font-weight: 500;
+               font-size: 30px;
+                @media #{$maxSmall} {
+                    font-size: 27px;
+                }
+            }
+        }
+       nav {
+            flex-grow: 2;
+            background-color: $redColor;
+            border-radius: 14px;
+            @media #{$maxSmall} {
+                border-radius: 0;
+                padding: 10px 0;
+                display: none;
+            }
+            ul { 
+                justify-content: space-around;
+                flex-flow: row wrap;
+                @media #{$maxSmall} {
+                    flex-direction: column;
+                }
+                li {
+                    font-size: 15px;
+                    @media #{$maxSmall} {
+                        margin: auto;
+                    }
+                    a {
+                        display: block;
+                        padding: 22px 8px;
+                        text-decoration: none;
+                        color: #fff;
+                        @include transition(all 0.4s ease-in-out);
+                        &:hover {
+                            color: #ddd;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    
+}
